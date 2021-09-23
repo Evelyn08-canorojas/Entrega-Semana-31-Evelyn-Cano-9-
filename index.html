@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrega Semana31 Evelyn 9°</title>
+</head>
+<body onmousemove="posi(event)">
+
+	<style>
+		body{
+			background-image: url(fondo.png);
+			background-size: cover;
+		}
+@font-face{
+	font-family: letra1;
+	src: url(letra1.ttf);
+}
+@font-face{
+	font-family: letra2;
+	src: url(letra2.ttf);
+}
+		.cgran{
+			position: absolute;
+			top: 50px;
+			width: 1256px;
+			height: 555px;
+			left: 50px;
+			background-color: white;
+			border-color: lightsalmon;
+			border-style: solid;
+			border-width: 3px;
+		}
+		.tit{
+			position: absolute;
+			top: 25px;
+			left: 90px;
+			width: 700px;
+			height: 100px;
+		}
+		.b1{
+			position: absolute;
+			top: 100px;
+			width: 900px;
+			height: 150px;
+			left: 240px;
+			background-color: #DAF0FE;
+			border-style: solid;
+			border-color: #B0D7F0;
+			border-width: 3px;
+		}
+		.c1{
+			position: absolute;
+			top: 300px;
+			width: 0px;
+			height: 260px;
+			left: 450px;
+			background-color: #B0D7F0;
+			transition: all 1s 0.5s;
+		}
+		.im1{
+			position: absolute;
+			top: 55px;
+			left: 200px;
+			height: 158px;
+			width: 0px;
+			transition: all 1s 0.5s;
+			z-index: 3;
+		}
+		.b2{
+			position: absolute;
+			top: 305px;
+			width: 300px;
+			height: 100px;
+			left: 110px;
+			background-color: #ECDEFF;
+			border-style: solid;
+			border-color: #CDAFF5;
+			border-width: 3px;
+		}
+		.c2{
+			position: absolute;
+			top: 300px;
+			width: 600px;
+			height: 0px;
+			left: 450px;
+			background-color: #CDAFF5;
+			transition: all 1s 0.5s;
+		}
+		.cer2{
+			position: absolute;
+			top: 390px;
+			height: 0px;
+			width: 100px;
+			left: 1100px;
+			background-color: #E3F6FA;
+			transition: all 1s 0.5s;
+			border-radius: 80px;
+            border-width: 0px;
+            border-color: #A4E5D9;
+            border-style: solid;
+		}
+		.tc2{
+            position: absolute;
+            top: -42px;
+            left: 33px;
+            font-size: 60px;
+            font-family: letra1;
+            color: transparent;
+            transition: all 1s 0.8s;
+		}
+		.tb2{
+			position: absolute;
+			top: -28px;
+			left: 25px;
+			color: #B574F2;
+			font-family: letra2;
+			font-size: 40px;
+		}
+		.corde{
+			position: absolute;
+			top: 90px;
+			left: 220px;
+			font-family: letra1;
+			font-size: 40px;
+			color: transparent;
+			transition: all 1s 0.5s;
+		}
+		.po{
+			position: absolute;
+			top: 15px;
+			left: 205px;
+			font-family: letra1;
+			font-size: 60px;
+			color: transparent;
+			transition: all 1s 0.5s;
+		}
+		.b3{
+			position: absolute;
+			top: 455px;
+			width: 300px;
+			height: 100px;
+			left: 110px;
+			background-color: #FFDCED;
+			border-style: solid;
+			border-color: #FFBEDF;
+			border-width: 3px;
+		}
+		.c3{
+			position: absolute;
+			top: 300px;
+			width: 0px;
+			height: 260px;
+			left: 450px;
+			background-color: #FFBEDF;
+			transition: all 1s 0.5s;
+		}
+		.cer3{
+			position: absolute;
+			top: 390px;
+			height: 100px;
+			width: 0px;
+			left: 1100px;
+			background-color: #E3F6FA;
+			transition: all 1s 0.5s;
+			border-radius: 80px;
+            border-width: 0px;
+            border-color: #A4E5D9;
+            border-style: solid;
+		}
+		.tb3{
+			position: absolute;
+			top: -28px;
+			left: 25px;
+			color: #EA7EBB;
+			font-family: letra2;
+			font-size: 40px;
+		}
+		.tc3{
+            position: absolute;
+            top: -42px;
+            left: 33px;
+            font-size: 60px;
+            font-family: letra1;
+            color: transparent;
+            transition: all 1s 0.8s;
+		}
+		.cuadro{
+			position: absolute;
+			top: 308px;
+			left: 460px;
+			width: 0px;
+			height: 100px;
+			background-color:#D4478B;
+
+			
+		}
+		.tex{
+			position: absolute;
+			top: 470px;
+			left: 610px;
+			font-size: 40px;
+			font-family: letra1;
+			color: transparent;
+			z-index: 3;
+			transition: all 1s 0.5s;
+		}
+
+
+	</style>
+<div class="cgran" id="cgrande"></div>
+<div class="b1" id="bot1" onclick="mostrar()">
+	<img src="tituloneo.png" class="tit">
+</div>
+<div class="c1" id="cua1">
+	<img src="logoneo.png" class="im1" id="ima1">
+</div>
+<div class="b2" id="bot2" onclick="mostrar2()">
+	<p class="tb2">Ejercicio #1</p>
+</div>
+<div class="c2" id="cua2">
+	<p class="corde" id="cor1"> </p>
+	<p class="po" id="pos"> </p>
+</div>
+<div class="cer2" id="ccer2" onclick="cerrar2()">
+	<p class="tc2" id="titc2">C</p>
+</div>
+<div class="b3" id="bot3" onclick="mostrar3()">
+	<p class="tb3">Ejercicio #2</p>
+</div>
+<div class="c3" id="cua3"></div>
+<p class="tex" id="text">Persigue el Cuadro</p>
+<div class="cer3" id="ccer3" onclick="cerrar3()">
+	<p class="tc3" id="titc3">C</p>
+</div>
+<div class="cuadro" id="cuadroo" onmousemove="mover()"></div>
+
+
+<script>
+	function mostrar() {
+	        cua1.style.width=600+"px";
+	        ima1.style.width=149+"px";
+	        setTimeout(cerrar,2000);
+	}
+	function cerrar()
+	{
+		cua1.style.width=0+"px"; 
+		ima1.style.width=0+"px";    
+	}
+	x=0;
+	function posi(event)
+	{
+		x=event.clientX;
+		y=event.clientY;
+		cor1.innerHTML=x+" , "+y;
+		 if(x>=449&&y>=300&&x<=1048&&y<=556)
+        {
+        	pos.innerHTML="Adentro";
+        }else{
+
+        	pos.innerHTML="Afuera";
+        }
+	}
+	function mostrar2() {
+	        cua2.style.height=260+"px";
+	        ccer2.style.height=100+"px";
+	        ccer2.style.borderWidth=3+"px";
+	        titc2.style.color="#8FC7D6";
+	        cor1.style.color="#4F3180";
+	        pos.style.color="#7B4AA9";
+
+	}
+	function cerrar2()
+	{
+		cua2.style.height=0+"px";
+		ccer2.style.height=0+"px"; 
+		ccer2.style.borderWidth=0+"px";
+	    titc2.style.color="transparent"; 
+	    cor1.style.color="transparent";
+	    pos.style.color="transparent";    
+	}
+	function mostrar3() {
+	    cua3.style.width=618+"px";
+	    ccer3.style.width=100+"px";
+	    ccer3.style.borderWidth=3+"px";
+	    titc3.style.color="#8FC7D6";
+	    cuadroo.style.width=100+"px";
+	    text.style.color="#F93996";
+	}
+	function cerrar3()
+	{
+		cua3.style.width=0+"px";
+		ccer3.style.width=0+"px";
+		ccer3.style.borderWidth=0+"px";
+	    titc3.style.color="transparent";
+	    cuadroo.style.width=0+"px"; 
+	    text.style.color="transparent";       
+	}
+	a=460;
+	b=308;
+	z=0;
+	function mover()
+	{
+		if(z<5)
+		{
+		a=a+100;
+        cuadroo.style.left=a+"px";
+        z=z+1;
+		}
+		else{
+			z=5;
+			if(z==5)
+			{
+				b=408;
+				cuadroo.style.top=b+"px";
+
+			}
+			w=0;
+			if(b==408&&w<5)
+			{
+				a=a-100;
+				cuadroo.style.left=a+"px";
+			}
+
+			if(a<460&&b==408)
+			{
+				cuadroo.style.width=0+"px";
+				text.innerHTML="Fin!";
+				text.style.left=730+"px";
+			}
+			
+		}
+		
+        
+
+	}
+	
+</script>
+</body>
+</html>
